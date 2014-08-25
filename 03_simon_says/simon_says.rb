@@ -19,6 +19,7 @@ def first_word(string)
   string.split(' ')[0]
 end
 
+#Based on http://stackoverflow.com/questions/15078964/ruby-titleize-how-do-i-ignore-smaller-words-like-and-the-or-etc
 def titleize(string)
   particles = ["and", "or", "the", "over", "to", "the", "a", "but"]
   string.capitalize.split(" ").map {|word| particles.include?(word.downcase) ? word : word.capitalize}.join(" ")
